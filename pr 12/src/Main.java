@@ -39,7 +39,7 @@ public class Main {
         }
     }
 
-    private static void wrFile(Scanner sc) {
+    public static void wrFile(Scanner sc) {
         System.out.println("Введіть кілька рядків (введіть 'exit' для завершення):");
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FNAME, true))) {
@@ -62,7 +62,7 @@ public class Main {
         }
     }
 
-    private static void rFile() {
+    public static void rFile() {
         try (BufferedReader reader = new BufferedReader(new FileReader(FNAME))) {
             String line;
             int lineNumber = 1;
@@ -78,7 +78,7 @@ public class Main {
         }
     }
 
-    private static void rRange(Scanner sc) {
+    public static void rRange(Scanner sc) {
         System.out.print("Введіть номер початкового рядка: ");
         int start = sc.nextInt();
         System.out.print("Введіть номер кінцевого рядка: ");
@@ -108,7 +108,7 @@ public class Main {
         }
     }
 
-    private static int countLinesInFile() {
+    public static int countLinesInFile() {
         int count = 0;
         try (BufferedReader reader = new BufferedReader(new FileReader(FNAME))) {
             while (reader.readLine() != null) {
